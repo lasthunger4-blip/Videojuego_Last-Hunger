@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://bfheacsg2yjry"]
+
+[ext_resource type="Script" uid="uid://dw2kl4c4jqykh" path="res://menu_principal.gd" id="1_v6bag"]
+[ext_resource type="Texture2D" uid="uid://d37noqyc85g21" path="res://Menu_Principal/01_fondo.png" id="2_ji6qy"]
+[ext_resource type="Texture2D" uid="uid://b6tukdnld6o76" path="res://Menu_Principal/02_titulo.png" id="3_alqxn"]
+[ext_resource type="Texture2D" uid="uid://cmoktaiij7djt" path="res://Menu_Principal/Botones/jugar.png" id="4_unwvm"]
+[ext_resource type="Texture2D" uid="uid://bxyxaofhm1mnc" path="res://Menu_Principal/Botones/salir.png" id="7_7ymri"]
+
+[node name="MenuPrincipal" type="Control" unique_id=1727270747]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 943.43994
+offset_bottom = 663.9199
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v6bag")
+metadata/_edit_vertical_guides_ = [1814.0, 1825.0]
+metadata/_edit_group_ = true
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=1278518302]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.994
+offset_left = -2.0
+offset_top = -6.0
+offset_right = -942.43994
+offset_bottom = -654.9364
+texture = ExtResource("2_ji6qy")
+
+[node name="Titulo" type="TextureRect" parent="." unique_id=1381358753]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.116000004
+anchor_right = 0.5
+anchor_bottom = 0.15
+offset_left = 132.76096
+offset_top = 22.0
+offset_right = 883.1931
+offset_bottom = 202.3
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_alqxn")
+
+[node name="Botones" type="VBoxContainer" parent="." unique_id=542771794]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.22700001
+anchor_top = 0.21700001
+anchor_right = 0.39600003
+anchor_bottom = 0.526
+offset_left = -220.76093
+offset_top = -359.07062
+offset_right = -484.64893
+offset_bottom = -655.2526
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5, 5)
+alignment = 1
+
+[node name="Jugar" type="Button" parent="Botones" unique_id=1232373354]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+icon = ExtResource("4_unwvm")
+
+[node name="Salir" type="Button" parent="Botones" unique_id=429381841]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_7ymri")
+
+[connection signal="pressed" from="Botones/Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Botones/Salir" to="." method="_on_salir_pressed"]
